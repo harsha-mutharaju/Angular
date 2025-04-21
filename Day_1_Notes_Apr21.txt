@@ -1,0 +1,10 @@
+node js
+https://github.com/sanjaysamantra1/git_notes/blob/main/git_notes.txt
+
+
+git config -l
+
+
+alt + b
+
+alt + shift + b
