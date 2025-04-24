@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let employees = [
+            {"id":1,"name":"har"},
+            {"id":2,"name":"sha"},
+            {"id":3,"name":"hhh"}
+        ];
+        console.log(employees);
+        console.table(employees,['id','name']);
+    </script>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+<!-- 
+<script>
+    let employees = [
+        { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
+        { "eId": 104, "name": "geeta", "sal": 8000, "gender": "female" },
+        { "eId": 103, "name": "sameer", "sal": 7000, "gender": "male" },
+        { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
+        { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
+    ];
+    console.log(employees);
+    console.table(employees,['name','sal']);
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Console Table</title>
+  <script>
+    // Sample employee data
+    const employees = [
+      { id: 1, name: "Alice", role: "Developer", location: "Texas" },
+      { id: 2, name: "Bob", role: "Tester", location: "California" },
+      { id: 3, name: "Charlie", role: "Manager", location: "New York" }
+    ];
+
+    // Display all properties
+    console.log("All Employee Data:");
+    console.table(employees);
+
+    // Display specific properties (optional)
+    console.log("Filtered Employee Data (only id and name):");
+    console.table(employees, ["id", "name"]);
+  </script>
+</head>
+<body>
+  <h1>Open the browser console to see the output</h1>
+</body>
+</html>

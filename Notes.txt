@@ -1,0 +1,117 @@
+node js
+https://github.com/sanjaysamantra1/git_notes/blob/main/git_notes.txt
+
+
+git config -l
+
+
+alt + b
+
+alt + shift + b
+
+----------------------------------------------------------------------------------------------------------------------------
+#div1 - gives div id as div1
+
+.div2 - gives div 2 as class name 
+
+ol>li*10{Country-$} - generates list 
+
+
+select>option*10{data-$} - gives dropdown
+
+
+
+
+CSS - inline , internal , external 
+
+use bootstrap - add CDN link to head element of html 
+
+using javascript - 
+
+1. browser - frontend
+2. Nodejs - backend
+
+console.log - runs in browser and Nodejs
+
+window.alert - works only in browser
+
+most common js : 
+console.log- doesnt work without object
+document.write - doesnt work without object
+window.alert - works without object - automatically refers to window object  - works with window.alert , alert , this.alert
+
+ check js methods from chrome developer tools -> console
+
+
+alert - ok 
+prompt - ok , cancel 
+
+confirm 
+
+// why is it adding in console, how to clear it ?
+
+
+
+
+
+day - 3 
+
+data types and variable  in js 
+primitives , non primitives
+
+
+number suffixed with n is bigint
+
+typeof , instanceof, array.isArray method
+
+ecma script  - ES
+
+ecma - european computer manufacturers association 
+
+javascript vs typescript
+
+
+tsc filename.ts
+web pack - convert ts to js
+
+types :
+
+npm install typescript
+npx tsc filename.ts
+
+
+optional parameters - ts
+
+
+ts to js : polyphils or substitues are getting generated 
+
+online es6 to es5 converter
+
+
+day - 4 apr 24
+
+
+variables - var , let , const 
+
+const - var : unchanged , array : push is allowed because only address is captured in const
+initialization doesnt work
+
+same thing works for object also 
+
+var - can be redeclared ,
+let , const -  cant be redeclared
+
+
+scope of variables - outside function global , inside func function scope , block - scope
+
+Temporal Dead Zone - TDZ -- even variable is present in memory , js doesnt initialize until crossing specific line 
+
+
+execution contexts - environment where the code executes - 1 global , 1 for each function 
+
+phases - creation , execution
+
+let , const - intiialization is needed to access variable in memory
+find ex context in callstack (chrome dev tools)
+
+hoisting
