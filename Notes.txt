@@ -115,3 +115,81 @@ let , const - intiialization is needed to access variable in memory
 find ex context in callstack (chrome dev tools)
 
 hoisting
+
+
+day 5
+
+functions - predefined , userdefined
+
+user defined - 4 types
+
+ declaration , expression , self invoked , arrow functions 
+
+ 
+Yesterday , we have discussed what are functions and types of functions with their benefits and limitations
+
+basically there are two types of functions , pre defined and user defined
+
+there are 4 ways to write functions : 
+1. function declaration
+2. function expression 
+3. IIFE ( Immediately invoked function expression)
+4. Arrow function
+
+function declaration is regular way of declaring function where we use function keyword and use regular flower brackets 
+
+function expression is similar way to function declaration , but we assign the function to a variable and call it with the variable name by passing parameters
+
+IIFE is invoked immediately, that means it is declared similar to function declaration and it is called immediately.
+the key point here is it can only be used once when function is run
+
+the last way is arrow functions (similar to lambda expression) . we use arrow to declare a function 
+
+we have also discussed how these functions can be called before / after declaration 
+
+we have discussed limitations and benefits of arrow functions
+
+usually , 'this' value is dynamic and depends on the context where it belongs ,
+but arrow functions doesnt have its own 'this' binding and it is lexical in this context
+
+it means , arrow function uses 'this' from code where the function belongs
+suppose if arrow function is part of a class, it uses the class 'this' variable
+
+in short , regular function this depends on how it is called
+and arrow function depends on where it is written 
+
+when it comes to other limitations of arrow functions ,
+
+they dont have own bindings to arguments as well
+
+they dont have access to new keyword
+
+they cant be used as constructors
+
+
+there are few benefits of arrow functionn,
+
+it has short and crisp syntax 
+implicit returns 
+
+static 'this' value - meaning once it is executed , the value of 'this' will be same even when we delay the
+function execution using set timeout method , it is not the case for regular methods . since it is dynamic , it doesnt 
+fetch value while using set timeout 
+
+one more point , when a function is passed as argument for other function , the passed function is called callback function
+and taking function is called higher order function
+
+
+
+
+and last thing is IIFE, 
+it is used when we try to avoid disturbing the global scope of the Javascript function 
+
+
+so, choosing the type of declaration purely depends on our use case and we cant just tell which one is better without a use case
+every type is good in its own way.
+
+thank you
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student {
+          firstName = 'virat';
+          lastName = 'kohli';
+      
+          fullName1() {
+            console.log(this.firstName, this.lastName, this);
+          }
+      
+          fullName2 = () => {
+            console.log(this.firstName, this.lastName, this);
+          }
+        }
+      
+        let std = new Student();
+        std.fullName1();
+        std.fullName2();
+
+
+        setTimeout(std.fullName1,2000);
+        setTimeout(std.fullName2,4000);
+      </script>
+      
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
