@@ -1,0 +1,28 @@
+<script>
+    function add(a,b){
+        console.log(a , b , this)
+        console.log(a+b+this.num)
+    }
+    add(2,3);
+
+
+    let obj1= {num : 4};
+    add.call(obj1,2,3);
+
+
+    let arr = [2,3];
+    add.call(obj1,' ',arr);
+
+    add.apply(obj1 , arr);
+
+    console.log('----------------------------')
+
+    let res1 = Math.max(10,20,30);
+    console.log(res1);
+
+    let arr1 = [10,20,30]
+    console.log(Math.max(arr));
+
+    console.log(Math.max.apply({},arr1));
+    console.log(Math.max(...arr1));
+</script>
