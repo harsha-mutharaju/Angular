@@ -51,6 +51,21 @@ for(let i =0; i<q3_str.length;i++){
 }
 console.log('3. Swap case for each character in a string : ',q3_ans);
 
+//4. Abbrevation
+let q4_str = 'Rabindra Nath Tagore';
+let words = q4_str.trim().split(' ');
+
+let q4_ans = '';
+
+for (let i = 0; i < words.length; i++) {
+  if (i < words.length - 1) {
+    q4_ans += words[i].charAt(0).toUpperCase() + '. ';
+  } else {
+    q4_ans += words[i].toLowerCase();
+  }
+}
+
+console.log(`4. Abbrevation of ${q4_str} is : `+q4_ans);
 
 
 //5. shifting characters by 1
@@ -65,23 +80,23 @@ console.log('5. Shifting the characters by one : ',q5_ans);
 
 // 6. write a program to validate paranthesis
 let q6_str = '([{}])';
-let q6_ans = '';
+let stack = [];
 let q6_map = { ')': '(', '}': '{', ']': '[' };
-for (let i of q6_str) {
-    if ('({['.includes(i)) {
-        q6_ans += i;
-    } else if (')}]'.includes(i)) {
-        let q6_last = q6_ans[q6_ans.length - 1];
-        if (q6_last === q6_map[i]) {
-            q6_ans = q6_ans.slice(0, -1);
-        } else {
-            q6_ans += i; 
-            break;
-        }
+let isValid = true;
+
+for (let ch of q6_str) {
+  if ('({['.includes(ch)) {
+    stack.push(ch);
+  } else if (')}]'.includes(ch)) {
+    if (stack.length === 0 || stack.pop() !== q6_map[ch]) {
+      isValid = false;
+      break;
     }
+  }
 }
 
-console.log(q6_ans === '' ? '6. Paranthesis is - valid' : '6. Paranthesis is - not valid');
+console.log(isValid && stack.length === 0 ? '6. Paranthesis is - valid' : '6. Paranthesis is - not valid');
+
 
 // 7. write a program to get 3 letter word and print its permutations
 
@@ -96,3 +111,71 @@ for(let i = 0 ; i < 3 ; i++){
         }
     }
 }
+
+function q7(str, res = '') {
+    if (!str.length) {
+        console.log(res);
+        return;
+    }
+    
+    for (let i = 0; i < str.length; i++) {
+        let current = str[i]; 
+        let remaining = str.slice(0, i) + str.slice(i + 1);
+        q7(remaining, res + current);
+    }
+}
+
+q7('ABC');
+
+
+//8. Integer to Roman
+
+function intToRoman(num) {
+    const dic = [
+        { val: 1000, sym: 'M' },
+        { val: 900, sym: 'CM' },
+        { val: 500, sym: 'D' },
+        { val: 400, sym: 'CD' },
+        { val: 100, sym: 'C' },
+        { val: 90, sym: 'XC' },
+        { val: 50, sym: 'L' },
+        { val: 40, sym: 'XL' },
+        { val: 10, sym: 'X' },
+        { val: 9, sym: 'IX' },
+        { val: 5, sym: 'V' },
+        { val: 4, sym: 'IV' },
+        { val: 1, sym: 'I' }
+    ];
+
+    let q8_res = '';
+    for (let item of dic) {
+        while (num >= item.val) {
+            q8_res += item.sym;
+            num -= item.val;
+        }
+    }
+    return q8_res;
+}
+
+console.log('8. Roman to Integer conversion :', intToRoman(9));   
+
+//9. Roman to Integer
+function romanToInt(s) {
+    const dic = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+    let total = 0;
+    let prev = 0;
+
+    for (let i = s.length - 1; i >= 0; i--) {
+        let current = dic[s[i]];
+        if (current < prev) {
+            total -= current;
+        } else {
+            total += current;
+        }
+        prev = current;
+    }
+    return total;
+}
+
+console.log('9. Roman to Integer :', romanToInt('XL')); 
+
